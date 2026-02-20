@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>自転車安全ナビ：わが家の青切符対策ガイド</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+        html { scroll-behavior: smooth; }
+        .fine-card:active { transform: scale(0.98); transition: transform 0.1s; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .safe-bounce { animation: bounce 2s infinite; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-14 items-center">
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-bicycle text-2xl text-blue-600"></i>
+                    <span class="font-black text-lg tracking-tighter text-slate-900">自転車安全ナビ</span>
+                </div>
+                <div class="sm:flex hidden space-x-6 text-sm font-bold text-slate-600">
+                    <a href="#family" class="hover:text-blue-600">家族への影響</a>
+                    <a href="#ibaraki" class="hover:text-blue-600">茨木重点地区</a>
+                    <a href="#fines" class="hover:text-blue-600">反則金</a>
+                </div>
+                <div class="sm:hidden">
+                    <a href="#family" class="text-xs bg-amber-500 text-white px-3 py-1.5 rounded-full font-bold shadow-sm">家族を守る</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-6 space-y-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gradient-to-br from-blue-700 to-indigo-800 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full mb-4">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-100">2026年4月1日 施行</span>
+                </div>
+                <h1 class="text-3xl font-black mb-3 leading-tight">
+                    パパ・ママ必見！<br>自転車ルールの新常識
+                </h1>
+                <p class="text-xs text-blue-100 leading-relaxed opacity-90 mb-6">
+                    16歳以上は「青切符」の対象に。茨木市内での登下校や買い物のルールが、これまで以上に厳しくチェックされます。
+                </p>
+                <div class="flex flex-col gap-2">
+                    <a href="#family" class="bg-amber-400 text-amber-900 text-center py-3 rounded-2xl font-black shadow-lg flex items-center justify-center gap-2 active:scale-95 transition">
+                        <i class="ph-bold ph-house-line"></i>
+                        わが家への影響をチェック
+                    </a>
+                </div>
+            </div>
+            <i class="ph ph-shield-check absolute -bottom-8 -right-8 text-9xl text-white/10 transform rotate-12"></i>
+        </section>
+
+        <!-- Family Impact Section -->
+        <section id="family" class="scroll-mt-20">
+            <div class="mb-6">
+                <h2 class="text-2xl font-black text-slate-900 mb-2 flex items-center gap-2">
+                    <i class="ph ph-users-three text-amber-500"></i>
+                    ご家族への具体的な影響
+                </h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    新しい「青切符制度」が、パパ、ママ、そして小学2年生の息子さんにどう関わるかをまとめました。
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Parent Card -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl">
+                            <i class="ph-fill ph-user-circle-plus"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-slate-800">パパ・ママ (16歳以上)</h3>
+                            <p class="text-[10px] text-blue-600 font-bold">青切符（反則金）の対象</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs space-y-3 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-caret-right text-blue-500 mt-0.5"></i>
+                            <span>信号無視やスマホ操作で、その場で「青切符」が切られ、家計に痛い<b>反則金（5,000円〜12,000円）</b>が発生します。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-caret-right text-blue-500 mt-0.5"></i>
+                            <span>反則金を払えば「前科」はつきませんが、繰り返すと<b>「自転車運転者講習（有料・3時間）」</b>の受講が義務化されます。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Son Card -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-amber-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-2xl">
+                            <i class="ph-fill ph-baby"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-slate-800">息子さん (小学2年生)</h3>
+                            <p class="text-[10px] text-amber-600 font-bold">指導カード・教育の対象</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs space-y-3 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-caret-right text-amber-500 mt-0.5"></i>
+                            <span>16歳未満のため、金銭的なペナルティ（青切符）はありません。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-caret-right text-amber-500 mt-0.5"></i>
+                            <span>代わりに警察から<b>「自転車安全指導カード」</b>が渡されます。これにはパパ・ママへの連絡欄があり、家庭での交通安全教育が求められます。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pick-up Warning (Critical Alert) -->
+                <div class="bg-red-600 rounded-2xl p-5 text-white shadow-lg border-4 border-red-200">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="ph-fill ph-warning-octagon text-3xl animate-pulse"></i>
+                        <h3 class="font-black text-lg uppercase italic">Pick-up Alert!</h3>
+                    </div>
+                    <p class="text-sm font-bold mb-3 leading-relaxed underline decoration-amber-300 decoration-2 underline-offset-4">
+                        小学2年生の息子さんを後ろに乗せるのは、実は「違反」です！
+                    </p>
+                    <div class="bg-white/10 rounded-xl p-3 text-xs leading-relaxed border border-white/20">
+                        <p class="mb-2"><b>ルール：</b>自転車の二人乗りができるのは「小学校に入学する前の幼児（6歳未満）」までです。</p>
+                        <p><b>改正後の影響：</b>2年生（7〜8歳）を乗せて走ると「二人乗り違反」として<b>3,000円の反則金</b>対象になる可能性があります。今後は息子さんも自分の自転車で走る練習を始めるのがベストです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ibaraki Districts Section -->
+        <section id="ibaraki" class="scroll-mt-20">
+            <div class="mb-6">
+                <h2 class="text-2xl font-black text-slate-900 mb-2 flex items-center gap-2">
+                    <i class="ph ph-map-trifold text-blue-600"></i>
+                    茨木市内の警戒エリア
+                </h2>
+                <p class="text-sm text-slate-600">茨木警察署が特に厳しくチェックしている重点地区です。</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">A</div>
+                    <div>
+                        <p class="font-black text-sm">府道大阪高槻京都線周辺</p>
+                        <p class="text-[10px] text-slate-500 leading-tight">イオンモール茨木周辺など。交通量が多く、事故も多発している主要路線です。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">B</div>
+                    <div>
+                        <p class="font-black text-sm">JR茨木駅周辺</p>
+                        <p class="text-[10px] text-slate-500 leading-tight">駅前の歩行者天国やバスターミナル付近。通勤・通学・買い物客の混雑が理由です。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black">C</div>
+                    <div>
+                        <p class="font-black text-sm">阪急茨木市駅周辺</p>
+                        <p class="text-[10px] text-slate-500 leading-tight">商店街エリア。人通りが多く、自転車と歩行者の接触リスクが高いエリアです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Toggle Section -->
+        <section id="system" class="scroll-mt-20">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="flex p-1.5 bg-slate-100 m-3 rounded-2xl">
+                    <button id="btn-old-system" class="flex-1 py-3 text-xs font-black rounded-xl transition" onclick="switchSystem('old')">以前の刑事罰</button>
+                    <button id="btn-new-system" class="flex-1 py-3 text-xs font-black rounded-xl bg-white shadow-md text-blue-700 transition" onclick="switchSystem('new')">新しい青切符</button>
+                </div>
+                
+                <div class="p-6">
+                    <div id="view-new-system" class="space-y-6">
+                        <div class="flex gap-2">
+                            <span class="text-[10px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-black">前科なし</span>
+                            <span class="text-[10px] bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-black">手続き10分</span>
+                        </div>
+                        <div class="relative pl-6 border-l-2 border-blue-200 space-y-6">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                                <h4 class="font-black text-sm text-slate-800">1. 青切符の受け取り</h4>
+                                <p class="text-[10px] text-slate-500 mt-1">警察官からその場で書類を渡されます。自動車の違反と同じ流れです。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                                <h4 class="font-black text-sm text-slate-800">2. 反則金の支払い</h4>
+                                <p class="text-[10px] text-slate-500 mt-1">1週間以内に銀行等で支払えば終了。裁判所へ行く必要はありません。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="view-old-system" class="hidden space-y-4 opacity-70">
+                        <p class="text-xs font-black text-red-600">刑事手続き（赤切符）の場合</p>
+                        <ul class="text-[10px] space-y-3 text-slate-600">
+                            <li class="flex gap-2"><i class="ph-bold ph-warning text-red-500"></i>警察や検察への呼び出し（取調べ）が必要</li>
+                            <li class="flex gap-2"><i class="ph-bold ph-warning text-red-500"></i>最悪の場合「前科」として記録が残る</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fines List Section -->
+        <section id="fines" class="scroll-mt-20">
+            <div class="mb-6">
+                <h2 class="text-2xl font-black text-slate-900 mb-2">反則金リスト</h2>
+                <div class="space-y-4">
+                    <div class="relative">
+                        <i class="ph ph-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input type="text" id="fine-search" placeholder="違反名で検索" class="w-full pl-11 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-500/10 outline-none text-sm shadow-sm font-bold" onkeyup="filterFines()">
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+                        <button class="filter-tag active bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-black shadow-md whitespace-nowrap" onclick="setFilter('all', this)">すべて</button>
+                        <button class="filter-tag bg-white text-slate-600 border border-slate-200 px-5 py-2 rounded-full text-xs font-black whitespace-nowrap" onclick="setFilter('high', this)">1万円以上</button>
+                        <button class="filter-tag bg-white text-slate-600 border border-slate-200 px-5 py-2 rounded-full text-xs font-black whitespace-nowrap" onclick="setFilter('mid', this)">6,000円</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fine-grid" class="grid grid-cols-1 gap-2.5">
+                <!-- Data populated by JS -->
+            </div>
+        </section>
+
+        <!-- Final Safe Tips -->
+        <section class="bg-amber-50 p-6 rounded-3xl border-2 border-amber-200 space-y-4">
+            <h2 class="text-xl font-black text-amber-900 flex items-center gap-2">
+                <i class="ph ph-heart text-red-500"></i>
+                家族で約束する「安全5則」
+            </h2>
+            <div class="grid grid-cols-1 gap-3">
+                <div class="flex gap-3 items-start">
+                    <span class="w-6 h-6 bg-amber-400 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">1</span>
+                    <p class="text-xs font-bold text-amber-800 leading-relaxed">車道の左側を走ろう（右側逆走は危険！）</p>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <span class="w-6 h-6 bg-amber-400 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">2</span>
+                    <p class="text-xs font-bold text-amber-800 leading-relaxed">交差点では必ず「止まって」確認しよう</p>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <span class="w-6 h-6 bg-amber-400 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">3</span>
+                    <p class="text-xs font-bold text-amber-800 leading-relaxed">暗くなる前にライトをつけよう（無灯火 5,000円）</p>
+                </div>
+                <div class="flex gap-3 items-start text-red-600">
+                    <span class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">4</span>
+                    <p class="text-xs font-bold leading-relaxed underline">飲酒運転は絶対に禁止！（重大な刑事罰）</p>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <span class="w-6 h-6 bg-amber-400 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">5</span>
+                    <p class="text-xs font-bold text-amber-800 leading-relaxed">命を守るヘルメットを家族全員でかぶろう</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
+            <div class="flex justify-center gap-2">
+                <i class="ph-fill ph-police-car text-blue-600 text-xl"></i>
+                <i class="ph-fill ph-shield-check text-amber-500 text-xl"></i>
+            </div>
+            <p class="text-[9px] text-slate-400 leading-loose">
+                出典：警察庁交通局「自転車を安全・安心に利用するために」<br>
+                茨木警察署「自転車指導啓発重点地区・路線」<br>
+                本アプリは改正内容の理解を助けるための要約版です。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const fineData = [
+            { name: "携帯電話使用(保持)", price: 12000, category: "high", icon: "ph-phone-slash" },
+            { name: "速度超過(25km/h以上)", price: 12000, category: "high", icon: "ph-gauge" },
+            { name: "信号無視", price: 6000, category: "mid", icon: "ph-traffic-signal" },
+            { name: "通行区分違反(逆走)", price: 6000, category: "mid", icon: "ph-arrows-left-right" },
+            { name: "指定場所一時不停止", price: 5000, category: "low", icon: "ph-hand-stop" },
+            { name: "無灯火", price: 5000, category: "low", icon: "ph-lightbulb-off" },
+            { name: "ブレーキ不良", price: 5000, category: "low", icon: "ph-wrench" },
+            { name: "遮断踏切立入り", price: 7000, category: "mid", icon: "ph-train" },
+            { name: "二人乗り(送迎注意)", price: 3000, category: "low", icon: "ph-users" },
+            { name: "歩道での徐行違反", price: 3000, category: "low", icon: "ph-person-walking" },
+            { name: "並進禁止違反", price: 3000, category: "low", icon: "ph-columns" }
+        ];
+
+        let currentCat = 'all';
+
+        function renderFines() {
+            const grid = document.getElementById('fine-grid');
+            const search = document.getElementById('fine-search').value.toLowerCase();
+            grid.innerHTML = '';
+
+            const filtered = fineData.filter(f => {
+                const matchesSearch = f.name.includes(search);
+                const matchesCategory = currentCat === 'all' || 
+                                      (currentCat === 'high' && f.price >= 10000) ||
+                                      (currentCat === 'mid' && f.price >= 6000 && f.price < 10000);
+                return matchesSearch && matchesCategory;
+            });
+
+            filtered.forEach(f => {
+                const card = document.createElement('div');
+                card.className = "fine-card bg-white p-4 rounded-2xl border border-slate-200 flex items-center justify-between shadow-sm active:bg-slate-50";
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl text-slate-400">
+                            <i class="ph ${f.icon}"></i>
+                        </div>
+                        <span class="text-xs font-black text-slate-700">${f.name}</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-lg font-black tracking-tight ${f.category === 'high' ? 'text-red-600' : 'text-slate-900'}">${f.price.toLocaleString()}</span>
+                        <span class="text-[8px] font-black text-slate-400 ml-0.5">円</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function setFilter(cat, btn) {
+            currentCat = cat;
+            document.querySelectorAll('.filter-tag').forEach(b => {
+                b.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md');
+                b.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+            });
+            btn.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md');
+            btn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+            renderFines();
+        }
+
+        function filterFines() { renderFines(); }
+
+        function switchSystem(type) {
+            const btnOld = document.getElementById('btn-old-system');
+            const btnNew = document.getElementById('btn-new-system');
+            const viewOld = document.getElementById('view-old-system');
+            const viewNew = document.getElementById('view-new-system');
+
+            if (type === 'new') {
+                btnNew.classList.add('bg-white', 'shadow-md', 'text-blue-700');
+                btnOld.classList.remove('bg-white', 'shadow-md', 'text-blue-700');
+                viewNew.classList.remove('hidden');
+                viewOld.classList.add('hidden');
+            } else {
+                btnOld.classList.add('bg-white', 'shadow-md', 'text-blue-700');
+                btnNew.classList.remove('bg-white', 'shadow-md', 'text-blue-700');
+                viewOld.classList.remove('hidden');
+                viewNew.classList.add('hidden');
+            }
+        }
+
+        window.addEventListener('load', () => { renderFines(); });
+    </script>
+</body>
+</html>
